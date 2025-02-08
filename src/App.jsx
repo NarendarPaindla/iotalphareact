@@ -4,6 +4,7 @@ import Greet from './components/Greet';
 import  Counter from './components/Counter';
 import MounseEventDemo from './components/MouseEventsDemo';
 import KeyboardEventsDemo from './components/KeyboardEventsDemo';
+import DragAndDropDemo from './components/DragAndDropDemo';
 function App(){
   const name="IOTalpha";
   return(
@@ -16,6 +17,7 @@ function App(){
    <Counter/> */}
    <MounseEventDemo/>
    <KeyboardEventsDemo/>
+   <DragAndDropDemo/>
    </>
   );
 }
