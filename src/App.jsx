@@ -1,24 +1,26 @@
-import Header from './components/Header';
-import Greeting  from './components/Greetings';
-import Greet from './components/Greet';
-import  Counter from './components/Counter';
-import MounseEventDemo from './components/MouseEventsDemo';
-import KeyboardEventsDemo from './components/KeyboardEventsDemo';
-import DragAndDropDemo from './components/DragAndDropDemo';
-function App(){
-  const name="IOTalpha";
-  return(
-   <>
-   {/* <Greeting/>
-   <Greet/>
-   <Header name={name}/>
-   <h1>Hello World</h1>
-   <p>This batch is {name}</p>
-   <Counter/> */}
-   <MounseEventDemo/>
-   <KeyboardEventsDemo/>
-   <DragAndDropDemo/>
-   </>
+import React from "react";
+import contacts from "./contacts";
+import Card from "./Card";
+import './style.css'
+function addCard(contact) {
+  return (
+    <Card
+      key={contact.id}
+      name={contact.name}
+      img={contact.imgURL}
+      phone={contact.phone}
+      email={contact.email}
+      company={contact.company}
+    />
+  );
+}
+
+function App() {
+  return (
+    <div className="cardcontainer">
+      <h1 className="heading">My Contacts</h1>
+      <>{contacts.map(addCard)}</>
+    </div>
   );
 }
 
